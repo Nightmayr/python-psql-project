@@ -13,7 +13,10 @@ def main():
         print("no arguments passed")
         sys.exit(1)
 
-    json_file = os.getcwd()+'/'+sys.argv[1]
+    if os.path.abspath(sys.argv[1]):
+        json_file = sys.argv[1]
+    else:
+        json_file = os.getcwd()+'/'+sys.argv[1]
     print(json_file)
 
     if os.path.exists(json_file) == False:
