@@ -14,8 +14,7 @@ def database_select():
     cur.close()
 
 
-# def database_insert(self, json_map):
-def database_insert():
+def database_insert(json_map):
     conn = psycopg2.connect(
         "dbname=test user=umayr host=rpi1 password=password")
     cur = conn.cursor()
@@ -27,5 +26,4 @@ def database_insert():
 
 if __name__ == "__main__":
     database_select()
-    database_insert()
     database_select()

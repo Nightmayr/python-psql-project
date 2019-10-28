@@ -4,8 +4,7 @@ import json
 def json_reader(json_path):
     with open(json_path) as json_file:
         data = json.load(json_file)
-        print(type(data))
-        print(data)
+    return data
 
 
 if __name__ == "__main__":

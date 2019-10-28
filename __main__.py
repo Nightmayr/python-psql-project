@@ -20,6 +20,10 @@ def main():
         print("Incorrect JSON path")
         sys.exit(1)
 
+    json_map = json_handler.json_reader(json_file)
+    database.database_insert(json_map)
+    database.database_select()
+
 
 if __name__ == "__main__":
     main()
