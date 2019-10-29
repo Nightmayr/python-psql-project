@@ -2,6 +2,7 @@ import sys
 import os
 import json_handler
 import database
+import argparse
 
 
 def main():
@@ -9,6 +10,14 @@ def main():
     #     len(sys.argv) < 2
     # except:
     #     print("no arguments passed")
+
+    parser = argparse.ArgumentParser(
+        description="Process a JSON file to be loaded postgres database")
+    parser.add_argument('json_path', type=str, nargs=1,
+                        help='an absolute or relative path to the json file')
+
+    args = parser.parse_args()
+    print(args.json_path[0])
     if len(sys.argv) < 2:
         print("no arguments passed")
         sys.exit(1)
