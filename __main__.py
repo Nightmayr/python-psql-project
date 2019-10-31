@@ -12,13 +12,11 @@ def main():
                         help='an absolute or relative path to the json file')
 
     args = parser.parse_args()
-    print(args.json_path[0])
 
-    if os.path.abspath(sys.argv[1]):
-        json_file = sys.argv[1]
+    if os.path.abspath(args.json_path[0]):
+        json_file = args.json_path[0]
     else:
-        json_file = os.getcwd()+'/'+sys.argv[1]
-    print(json_file)
+        json_file = os.getcwd()+'/'+args.json_path[0]
 
     if os.path.exists(json_file) == False:
         print("Incorrect JSON path")
