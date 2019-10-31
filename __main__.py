@@ -6,11 +6,6 @@ import argparse
 
 
 def main():
-    # try:
-    #     len(sys.argv) < 2
-    # except:
-    #     print("no arguments passed")
-
     parser = argparse.ArgumentParser(
         description="Process a JSON file to be loaded postgres database")
     parser.add_argument('json_path', type=str, nargs=1,
