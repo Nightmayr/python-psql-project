@@ -6,8 +6,8 @@ import argparse
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="Process a JSON file to be loaded postgres database")
+    parser = argparse.ArgumentParser(prog="python-psql-loader",
+                                     description="Process a JSON file to be loaded to  a postgres database")
     parser.add_argument('json_path', type=str, nargs=1,
                         help='an absolute or relative path to the json file')
 
