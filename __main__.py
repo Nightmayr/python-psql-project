@@ -13,9 +13,6 @@ def main():
 
     args = parser.parse_args()
     print(args.json_path[0])
-    if len(sys.argv) < 2:
-        print("no arguments passed")
-        sys.exit(1)
 
     if os.path.abspath(sys.argv[1]):
         json_file = sys.argv[1]
